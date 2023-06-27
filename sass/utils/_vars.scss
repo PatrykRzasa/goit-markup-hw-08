@@ -1,0 +1,18 @@
+//kolory
+$hoverColor: #2196f3;
+$primaryColor: #212121;
+$secondaryColor: #757575;
+$negativeColor: #ffffff;
+$iconColor: currentcolor;
+
+// fonty
+$fonts: 'Roboto', sans-serif;
+
+//tranzycje
+$transColor: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$transBorderColor: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$transFill: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$transScale: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$transBgColor: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$transTran: transform 250ms linear;
+$transShadow: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);

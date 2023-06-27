@@ -1,0 +1,15 @@
+//zmienne
+@use './utils/vars' as *;
+//komponenty
+@import 'components/global';
+@import 'components/header';
+@import 'components/main-section';
+@import 'components/list-one';
+@import 'components/services-list';
+@import 'components/team';
+@import 'components/socials';
+@import 'components/clients-list';
+@import './components/buttons-list';
+@import './components/portfolio-list';
+@import './components/footer';
+@import './components/modal';

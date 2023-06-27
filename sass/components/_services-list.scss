@@ -1,0 +1,23 @@
+.services-list {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+  max-width: 1170px;
+
+  &_box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    background: rgba(47, 48, 58, 0.8);
+    height: 70px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: $negativeColor;
+    bottom: 70px;
+  }
+}

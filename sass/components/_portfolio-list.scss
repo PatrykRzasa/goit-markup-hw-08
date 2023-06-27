@@ -1,0 +1,65 @@
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style: none;
+
+  &_description {
+    border: 1px solid rgba(238, 238, 238, 1);
+    border-top: none;
+    padding: 20px 24px;
+
+    & b {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 2;
+      letter-spacing: 0.06em;
+    }
+
+    & span {
+      font-size: 16px;
+      line-height: 1.9;
+      letter-spacing: 0.03em;
+      color: $secondaryColor;
+    }
+  }
+
+  &_box {
+    overflow: hidden;
+    position: relative;
+  }
+
+  &_overlay {
+    width: 370px;
+    position: absolute;
+    height: 294px;
+    display: flex;
+    align-items: center;
+    background: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition: $transTran;
+  }
+
+  &_item {
+    transition: $transShadow;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+      cursor: pointer;
+
+      & .portfolio-list_overlay {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+.overlay_description {
+  margin: 49px 45px 49px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: $negativeColor;
+}

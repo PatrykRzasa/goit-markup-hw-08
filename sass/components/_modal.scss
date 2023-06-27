@@ -1,0 +1,196 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transition-property: opacity visibility;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: not-allowed;
+
+  &_label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: $secondaryColor;
+  }
+
+  &_box {
+    width: 528px;
+    height: 581px;
+    background-color: $negativeColor;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &_input {
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 42px;
+    font-size: 12px;
+    line-height: 14px;
+    transition: $transBorderColor;
+
+    &:focus-within {
+      border-color: $hoverColor;
+
+      & > svg {
+        fill: $hoverColor;
+      }
+    }
+  }
+
+  &_textarea {
+    width: 448px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &_contacts {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  &_title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin: 40px 40px 12px;
+  }
+
+  &_submit-button {
+    width: 200px;
+    height: 50px;
+    background: $hoverColor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-style: none;
+    margin: 30px 164px 40px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    color: $negativeColor;
+    cursor: pointer;
+  }
+
+  &_checkbox {
+    appearance: none;
+    width: 16px;
+    height: 15px;
+    z-index: 10;
+
+    &--unchecked {
+      position: absolute;
+      transition: scale, 0.2s;
+    }
+
+    &--checked {
+      position: absolute;
+      fill: var(--negative-text-color);
+      border-radius: 2px;
+      visibility: hidden;
+      scale: 0;
+      transition: $transBgColor;
+      transition-property: background-color, visibility;
+    }
+
+    &:checked ~ .modal_checkbox--unchecked {
+      scale: 0;
+    }
+    &:checked ~ .modal_checkbox--checked {
+      visibility: visible;
+      background-color: $hoverColor;
+      scale: 1;
+    }
+  }
+
+  &_checkbox-text {
+    margin-left: 8px;
+
+    & > a {
+      color: $hoverColor;
+    }
+  }
+
+  &_checkbox-setup {
+    margin-top: 20px;
+    margin-left: 55px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: $secondaryColor;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  &_input-div {
+    position: relative;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+  }
+
+  &_input-icon {
+    position: absolute;
+    left: 13px;
+    transition: $transFill;
+  }
+
+  &_close-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+  }
+}
+
+textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $secondaryColor;
+}
+
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}

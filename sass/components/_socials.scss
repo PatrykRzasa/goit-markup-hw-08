@@ -1,0 +1,34 @@
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  margin-bottom: 30px;
+
+  &_icon {
+    fill: rgba(175, 177, 184, 1);
+  }
+
+  &_item {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transBgColor;
+    transition-property: background-color, fill;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    &:hover,
+    &:focus {
+      background-color: $hoverColor;
+      cursor: pointer;
+
+      & > svg {
+        fill: $negativeColor;
+        cursor: pointer;
+      }
+    }
+  }
+}

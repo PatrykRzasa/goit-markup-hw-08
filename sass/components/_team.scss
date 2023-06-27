@@ -1,0 +1,41 @@
+.team {
+  background-color: #f5f4fa;
+
+  &_item {
+    background-color: $negativeColor;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    margin-top: 50px;
+  }
+
+  &_list {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+  }
+
+  &_description {
+    padding-top: 30px;
+    text-align: center;
+
+    & span {
+      font-size: 16px;
+      line-height: 1.19;
+      letter-spacing: 0.03em;
+      color: $secondaryColor;
+    }
+
+    & b {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.19;
+      letter-spacing: 0.03em;
+    }
+
+    & p {
+      margin-top: 10px;
+      margin-bottom: 16px;
+    }
+  }
+}

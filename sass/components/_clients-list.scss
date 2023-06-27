@@ -1,0 +1,34 @@
+.clients-list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin-top: 50px;
+
+  &_icon {
+    fill: rgba(175, 177, 184, 1);
+    transition: $transFill;
+  }
+
+  &_item {
+    width: 170px;
+    height: 92px;
+    border: 1px solid;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: rgba(175, 177, 184, 1);
+    transition: $transBorderColor;
+
+    &:hover,
+    &:focus {
+      border-color: $hoverColor;
+      cursor: pointer;
+
+      & > .clients-list_icon {
+        fill: $hoverColor;
+        cursor: pointer;
+      }
+    }
+  }
+}
