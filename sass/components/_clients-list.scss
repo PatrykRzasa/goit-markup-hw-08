@@ -3,6 +3,9 @@
   list-style: none;
   gap: 30px;
   margin-top: 50px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 
   &_icon {
     fill: rgba(175, 177, 184, 1);
@@ -10,7 +13,7 @@
   }
 
   &_item {
-    width: 170px;
+    width: 210px;
     height: 92px;
     border: 1px solid;
     border-radius: 4px;
@@ -19,6 +22,13 @@
     align-items: center;
     border-color: rgba(175, 177, 184, 1);
     transition: $transBorderColor;
+
+    @include tablet {
+      width: 226px;
+    }
+    @include desktop {
+      width: 170px;
+    }
 
     &:hover,
     &:focus {

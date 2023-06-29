@@ -1,17 +1,44 @@
 .page-header {
   display: flex;
   justify-content: space-between;
+  padding: 10px 15px;
+
+  @include tablet {
+    padding: 19px 0;
+  }
+  @include desktop {
+    padding: 24px 0;
+  }
+
+  &_mobile {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .navigation {
   display: flex;
   align-items: center;
   gap: 93px;
 
+  &_button {
+    border: none;
+    background-color: white;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
   &_menu {
-    display: flex;
+    display: none;
     gap: 46px;
     list-style-type: none;
+
+    @include tablet {
+      display: flex;
+    }
   }
+
   &_link {
     font-weight: 500;
     font-size: 14px;
@@ -45,6 +72,7 @@
     }
   }
 }
+
 .logo {
   font-family: 'Raleway';
   font-weight: 700;
@@ -60,9 +88,19 @@
 }
 
 .contact {
-  display: flex;
-  gap: 50px;
-  padding: 32px 0;
+  display: none;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+  }
 
   &_link {
     font-weight: 500;
@@ -75,12 +113,13 @@
     display: flex;
     align-items: center;
     transition: $transColor;
-
-    &:hover,
-    &:focus {
-      color: $hoverColor;
-    }
   }
+
+  &:hover,
+  &:focus {
+    color: $hoverColor;
+  }
+
   &_icon {
     fill: $iconColor;
     margin-right: 10px;
@@ -88,6 +127,5 @@
 }
 
 header {
-  width: 1600px;
   border-bottom: 1px solid #ececec;
 }

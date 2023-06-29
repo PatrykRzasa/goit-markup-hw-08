@@ -1,9 +1,13 @@
 .services-list {
   list-style-type: none;
-  display: flex;
+  display: none;
   gap: 30px;
   margin-top: 50px;
   max-width: 1170px;
+
+  @include desktop {
+    display: flex;
+  }
 
   &_box {
     position: relative;
@@ -19,5 +23,12 @@
     letter-spacing: 0.03em;
     color: $negativeColor;
     bottom: 70px;
+  }
+}
+.headline-services {
+  display: none;
+
+  @include desktop {
+    display: contents;
   }
 }

@@ -1,6 +1,9 @@
 //zmienne
 @use './utils/vars' as *;
+//mixiny
+@import './utils/mixins.scss';
 //komponenty
+@import './components/mobile-menu';
 @import 'components/global';
 @import 'components/header';
 @import 'components/main-section';

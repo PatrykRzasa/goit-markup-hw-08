@@ -12,7 +12,16 @@
   &_list {
     list-style-type: none;
     display: flex;
+    flex-direction: column;
     gap: 30px;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    @include desktop {
+      flex-wrap: nowrap;
+    }
   }
 
   &_description {

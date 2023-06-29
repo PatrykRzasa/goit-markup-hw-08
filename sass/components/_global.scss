@@ -16,15 +16,25 @@ body {
 }
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 .section {
   padding: 94px 0;
 }
 .container {
-  width: 1200px;
+  max-width: 480px;
   margin: 0 auto;
   padding: 0 15px;
-  max-width: 100%;
+  width: 100%;
+
+  @include tablet {
+    max-width: 768px;
+  }
+
+  @include desktop {
+    max-width: 1200px;
+  }
 }
 .headline {
   font-weight: 700;
