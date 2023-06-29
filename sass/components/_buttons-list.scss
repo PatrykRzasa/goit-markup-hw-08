@@ -16,7 +16,7 @@
     border-style: none;
     background: #f5f4fa;
     transition: $transBgColor;
-    transition-property: background-color color;
+    transition-property: background-color, color;
 
     &:hover,
     &:focus {
