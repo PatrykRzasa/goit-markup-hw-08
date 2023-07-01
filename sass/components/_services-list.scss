@@ -1,6 +1,5 @@
 .services-list {
   list-style-type: none;
-  display: none;
   gap: 30px;
   margin-top: 50px;
   max-width: 1170px;
@@ -25,7 +24,7 @@
     bottom: 70px;
   }
 }
-.headline-services {
+.services-section {
   display: none;
 
   @include desktop {

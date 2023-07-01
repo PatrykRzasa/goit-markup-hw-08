@@ -2,7 +2,7 @@
   list-style-type: none;
   display: flex;
   gap: 30px;
-  margin-bottom: 94px;
+
   max-width: 1170px;
   flex-direction: column;
 
@@ -12,6 +12,7 @@
   }
   @include desktop {
     flex-wrap: nowrap;
+    margin-bottom: 94px;
   }
 
   &_div {

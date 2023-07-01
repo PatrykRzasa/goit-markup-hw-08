@@ -3,6 +3,9 @@
   padding: 60px 0;
 
   &_socials-block {
+    @include tablet {
+      margin-left: 144px;
+    }
     @include desktop {
       margin-left: 70px;
       margin-top: 12px;
@@ -69,7 +72,6 @@
     margin-top: 36px;
     transition: $transScale;
     cursor: pointer;
-    margin-left: 125px;
 
     @include desktop {
       margin-top: 0;
@@ -90,8 +92,9 @@
   }
 
   &_form {
-    margin: 0 auto;
-
+    @include tablet {
+      margin-left: 151px;
+    }
     @include desktop {
       display: flex;
       flex-direction: column;
@@ -102,14 +105,19 @@
   }
 
   &_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @include desktop {
-      display: flex;
+      flex-direction: row;
+
       gap: 12px;
+      margin: 0 auto;
     }
   }
 
   &_email-input {
-    width: 450px;
+    width: 100%;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -121,6 +129,9 @@
     line-height: 20px;
     color: $negativeColor;
 
+    @include tablet {
+      width: 450px;
+    }
     @include desktop {
       width: 358px;
     }

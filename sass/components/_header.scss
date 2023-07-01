@@ -23,6 +23,13 @@
   &_button {
     border: none;
     background-color: white;
+    transition: $transFill;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      fill: $hoverColor;
+    }
 
     @include tablet {
       display: none;
@@ -113,11 +120,11 @@
     display: flex;
     align-items: center;
     transition: $transColor;
-  }
 
-  &:hover,
-  &:focus {
-    color: $hoverColor;
+    &:hover,
+    &:focus {
+      color: $hoverColor;
+    }
   }
 
   &_icon {

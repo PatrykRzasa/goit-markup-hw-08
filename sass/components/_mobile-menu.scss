@@ -17,12 +17,23 @@
   flex-direction: column;
   justify-content: space-between;
 
+  &.is-open {
+    transform: translateX(0);
+  }
+
   &_close-button {
     background-color: transparent;
     border: none;
     position: absolute;
     right: 25px;
     top: 21px;
+    transition: $transFill;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      fill: $hoverColor;
+    }
   }
 
   &_links {
@@ -42,6 +53,12 @@
     letter-spacing: 0.02em;
     text-align: left;
     color: $primaryColor;
+    transition: $transColor;
+
+    &:hover,
+    &:focus {
+      color: $hoverColor;
+    }
   }
   &_contacts {
     display: flex;
@@ -92,7 +109,4 @@
       margin-right: 10px;
     }
   }
-}
-.is-open {
-  transform: translate(0);
 }
