@@ -20,7 +20,7 @@
   }
 
   &_box {
-    width: 450px;
+    width: 350px;
     height: 581px;
     background-color: $negativeColor;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -35,13 +35,21 @@
     flex-direction: column;
     align-items: center;
 
+    @media screen and (width >= 450px) {
+      width: 450px;
+    }
+
     @include desktop {
       width: 528px;
     }
   }
 
   &_form {
-    width: 370px;
+    width: 300px;
+
+    @media screen and (width >= 450px) {
+      width: 370px;
+    }
 
     @include desktop {
       width: 448px;
@@ -70,13 +78,17 @@
   }
 
   &_textarea {
-    width: 370px;
+    width: 300px;
     height: 120px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding: 12px 16px;
     font-size: 12px;
     line-height: 14px;
+
+    @media screen and (width >= 450px) {
+      width: 370px;
+    }
 
     @include desktop {
       width: 450px;
@@ -100,13 +112,17 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border-style: none;
-    margin: 30px 85px 40px;
+    margin: 20px 50px 40px;
     font-weight: 700;
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 0.06em;
     color: $negativeColor;
     cursor: pointer;
+
+    @media screen and (width >= 450px) {
+      margin: 30px 85px 40px;
+    }
 
     @include desktop {
       margin: 30px 124px 40px;
